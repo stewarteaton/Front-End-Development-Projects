@@ -1,0 +1,43 @@
+<head>
+</head>
+
+<body bgcolor="#BFE6F0
+">
+
+
+  <table style="width:50%";>
+    <col width="90">
+    <col width="120">
+    <col width="90">
+    <tr id="header">
+      <th id="headerCol" colspan="4">Twitch.TV Streamers</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      
+    </tr>
+    <tr id="row0">
+      <th><img id="logo0" src=""></th>
+      <th id="channel0"><a href="https://www.twitch.tv/esl_sc2" target="_blank">ESL_SC2</a></th>
+      <th id="status0"></th>
+      <th id="bio0"></th>
+    <tr id="row1">
+      <th><img id="logo1" src=""></th>
+      <th id="channel1"><a href="https://www.twitch.tv/freecodecamp" target="_blank">FreeCodeCamp</a></th>
+      <th id="status1"></th>
+      <th id="bio1"></th> 
+    </tr>
+    <tr id="row2">
+      <th><img id="logo2" src=""></th>
+      <th id="channel2"><a href="https://www.twitch.tv/RobotCaleb" target="_blank">RobotCaleb</a></th>
+      <th id="status2"></th>
+      <th id="bio2"></th>
+    </tr>
+    <tr id="footer">
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    <table>
+</body>
