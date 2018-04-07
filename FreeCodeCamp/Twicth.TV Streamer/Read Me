@@ -1,2 +1,5 @@
 
-Hello
+This application utilizes Twitch.tv's API in order to get data about certain channels listed
+and ultimately allow viewers to see whether the channel is currently streaming or not.
+
+Here is a link to the working demo: https://codepen.io/stewmeista/full/XZYbGx/ 
