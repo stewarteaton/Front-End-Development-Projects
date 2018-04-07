@@ -1,0 +1,98 @@
+$(document).ready(function(){
+  
+  var number;
+  var list = "";
+  var listCalc="";
+ 
+//Display value of button on screen before calculations  
+ $('button').click(function(){
+   number = $(this).attr("value");
+   
+   if(number !== "CE"){
+   
+   if (number !== "=" ){
+   $('#displayBox').html(number);
+   }
+   
+     list = list + number;
+   
+   if(number !== "="){
+     listCalc = listCalc + number;
+   }
+  
+   $('#list').html(list);
+   
+//Make sure two operators aren't consecutive
+   if (number == "+" || number== "*" || number == "-" || number == "/" || number == "="){
+     if(list.charAt(list.length-2) == "+" || list.charAt(list.length-2) == "-" ||list.charAt(list.length-2) == "*" || list.charAt(list.length-2) == "/" || list.charAt(list.length-2) == "=" || list.charAt(0)=="+" || list.charAt(0)=="-" ||list.charAt(0)=="*" ||list.charAt(0)=="/" ||list.charAt(0)=="="){
+       $('#list').html("Illegal operation");
+       $('#displayBox').html(0);
+       list="";
+       listCalc="";
+     }
+   }
+   
+ //Make sure list isn't too long;
+     if (list.length > 13){
+     $('#displayBox').html(0);
+     $('#list').html("Limit Exceeded");
+     list="";
+     listCalc="";
+   }
+   }
+ })
+  
+ //Calculate the list of numbers when equal button is pressed and reset
+ $('#equalButton').click(function(){
+  //Make sure number isn't too large
+  if (listCalc.length >12){
+    $('#displayBox').html(0);
+    $('#list').html("Limit Exceeded");
+    listCalc="";
+    list="";
+  }
+   else{
+   var total = eval(listCalc);
+   //only evaluates if total is not zero
+   if (total !== 0) {
+   //if fraction, round to two decimals
+   if (total % 1 !==0){
+     total = total.toFixed(2);
+   }
+   $('#displayBox').html(total);
+   list = list + total;
+   $('#list').html(list);
+   list=total;
+   listCalc=total;
+   }
+   }
+ })
+  
+//Resets code when clear button is pressed
+ $('#AC').click(function(){
+   $('#list').html(0);
+   $('#displayBox').html(0);
+   number=0;
+   list="";
+   listCalc="";
+ })
+  
+ $('#CE').click(function(){
+   if (list.length>1){
+      list = list.slice(0,-1);
+      listCalc = listCalc.slice(0,-1);
+      $('#displayBox').html(0);
+      $('#list').html(list);
+   }
+   else{
+     list="";
+     listCalc="";
+     $('#displayBox').html(0);
+      $('#list').html(0);
+   }
+ })
+
+  
+  
+  
+})
