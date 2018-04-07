@@ -1,0 +1,83 @@
+body {
+  background-color:#9A7AA4;
+}
+
+#content {
+  position: absolute;
+  height: 400px;
+  width: 300px;
+  background-color: #DAD4D9;
+  border-radius: 15px;
+  top: 50%;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -150px;
+  box-shadow: 0 5px 20px black;
+}
+
+#title{
+  text-align: center;
+  font-size:20px;
+  font-family: 'Lato',regular italic ;
+  padding-top:5px;
+  padding-bottom:15px;
+}
+
+#displayBox {
+  background-color:#F3F7DA;
+  padding-top:5px;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius:5px;
+  border: 3px solid #B6B6B6;
+  height: 60px;
+  width: 85%;
+  text-align: right;
+  font-size: 30px;
+  padding-right: 5px;
+}
+
+#list {
+  font-size: 15px;
+  text-align:right;
+  margin-right: 28px;
+  margin-top:-20px;
+  color:#9FA28E;
+  margin-bottom:10px;
+}
+
+#buttonContainer {
+  width: 285px;
+  margin-top:15px;
+  margin-left:15px;
+  display: inline-block;
+  
+}
+
+button {
+  height: 40px;
+  width: 50px;
+  margin: 0px 5px 10px 8px;
+  border-radius:5px;
+  box-shadow: 0px 2px 2px black;
+  font-size:15px;
+  font-weight:bold;
+  outline:none;
+}
+
+#zeroButton {
+  width:117px;
+}
+
+#equalButton {
+  position: absolute;
+  margin-top:-50px;
+  margin-left: 12px;
+  height: 90px;
+  background-color:#AFD2F7;
+}
+
+.red {
+  background-color: #F94242;
+  color: white;
+}
