@@ -1,0 +1,64 @@
+
+
+$(document).ready(function(){
+  
+//Get ESL Logo
+   $.getJSON('https://wind-bow.glitch.me/twitch-api/users/ESL_SC2',function(data){
+   var img = data.logo;
+     $('#logo0').attr("src",img);
+     
+ });
+  
+//Get Code Camp Logo
+ $.getJSON('https://wind-bow.glitch.me/twitch-api/users/freecodecamp',function(data){
+   var img = data.logo;
+    $('#logo1').attr("src",img);
+ });
+  
+//Get Robot Caleb Logo
+  $.getJSON('https://wind-bow.glitch.me/twitch-api/users/RobotCaleb',function(data){
+   var img = data.logo;
+    $('#logo2').attr("src",img);
+ });
+  
+//Get ESL SC2 Stream Status
+ $.getJSON('https://wind-bow.glitch.me/twitch-api/streams/esl_SC2',function(data){
+  
+  if (data.stream == null){
+  $('#status0').html("Offline");
+  }
+  else {
+   $('#row0').css("background-color","green");
+    $('#status0').html("Online");
+    $('#bio0').html(data.stream.game + ": " + data.stream.channel.status);
+  };  
+}); 
+  
+//Get Code Camp Stream Status
+$.getJSON('https://wind-bow.glitch.me/twitch-api/streams/freecodecamp',function(data){
+  
+  if (data.stream == null){
+  $('#freeCodeCampStatus').html("Offline");
+  $('#status1').html("Offline");
+  }
+  else {
+    $('#bio1').html(data.stream.game + ": " + data.stream.channel.status);
+     $('#status1').html("Online");
+  };  
+    
+});
+  
+//Robot Caleb Stream Status
+  $.getJSON('https://wind-bow.glitch.me/twitch-api/streams/RobotCaleb',function(data){
+  
+  if (data.stream == null){
+  $('#status2').html("Offline");
+  }
+  else {
+    $('#bio2').html(data.stream.game + ": " + data.stream.channel.status);
+    $('#status2').html("Online");
+  };  
+});
+
+  
+  })
